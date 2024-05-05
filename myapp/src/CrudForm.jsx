@@ -9,27 +9,27 @@ import * as Yup from "yup";
 
 const CrudForm = (props) => {
   const Emp = Yup.object().shape({
-    firstname: Yup.string().required("title is required"),
-    lastname: Yup.string().required("title is required"),
-    cpntactnumber: Yup.string().required("title is required"),
+    firstname: Yup.string().required("firstname is required"),
+    lastname: Yup.string().required("lastname is required"),
+    cpntactnumber: Yup.string().required("cpntactnumber is required"),
     email: Yup.string()
-      .required("title is required")
+      .required("email is required")
       .email("enter a proper email"),
   });
 
-//   const formik = useFormik({
-//     initialValues: {
-//       id: "",
-//       firstname: "",
-//       lastname: "",
-//       cpntactnumber: "",
-//       email: "",
-//     },
-//     validationSchema: Emp,
-//     onSubmit: (values) => {
-//       console.log(values);
-//     },
-//   });
+  //   const formik = useFormik({
+  //     initialValues: {
+  //       id: "",
+  //       firstname: "",
+  //       lastname: "",
+  //       cpntactnumber: "",
+  //       email: "",
+  //     },
+  //     validationSchema: Emp,
+  //     onSubmit: (values) => {
+  //       console.log(values);
+  //     },
+  //   });
 
   const { handleClose, open, d } = props;
   const [data, setData] = useState({
@@ -111,7 +111,6 @@ const CrudForm = (props) => {
           value={data?.id}
           variant="standard"
           onChange={handleChange}
-         
         />
         <TextField
           autoFocus
@@ -125,10 +124,10 @@ const CrudForm = (props) => {
           value={data?.firstname}
           variant="standard"
           onChange={handleChange}
-        //   error={
-        //     formik.touched.firstname && Boolean(formik.errors.firstname)
-        //   }
-        //   helperText={formik.touched.firstname && formik.errors.firstname}
+          //   error={
+          //     formik.touched.firstname && Boolean(formik.errors.firstname)
+          //   }
+          //   helperText={formik.touched.firstname && formik.errors.firstname}
         />
         <TextField
           autoFocus
